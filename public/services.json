@@ -1,0 +1,9 @@
+[
+    {"id": 1, "name" : "Osthir Tea", "price" : 50 , "img" : "https://images.pexels.com/photos/2013749/pexels-photo-2013749.jpeg?auto=compress&cs=tinysrgb&h=250&w=360 ", "description" : "Very Teasty" },
+    {"id": 2, "name" : "Osthir Coffe", "price" : 50 , "img" : "https://images.pexels.com/photos/1034044/pexels-photo-1034044.jpeg?auto=compress&cs=tinysrgb&h=250&w=360 ", "description" : "Very Teasty" },
+    {"id": 3, "name" : "Osthir Milkshake", "price" : 50 , "img" : "https://images.pexels.com/photos/908331/pexels-photo-908331.jpeg?auto=compress&cs=tinysrgb&h=250&w=360 ", "description" : "Very Teasty" },
+    {"id": 4, "name" : "Osthir Lacchi", "price" : 50 , "img" : "https://images.pexels.com/photos/162947/coffee-glass-beverage-coffee-mug-162947.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=250&w=360 ", "description" : "Very Teasty" },
+    {"id": 5, "name" : "Osthir Juice", "price" : 50 , "img" : "https://images.pexels.com/photos/1493079/pexels-photo-1493079.jpeg?auto=compress&cs=tinysrgb&h=250&w=360", "description" : "Very Teasty" },
+    {"id": 6, "name" : "Osthir Cold Drink", "price" : 50 , "img" : "https://images.pexels.com/photos/4111831/pexels-photo-4111831.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=250&w=360 ", "description" : "Very Teasty" }
+    
+]
