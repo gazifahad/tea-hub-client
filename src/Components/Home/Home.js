@@ -4,9 +4,9 @@ import Services from "../Services/Services";
 
 const Home = () => {
   return (
-    <div className="mb-5">
-      <div className="mb-5">
-        <Carousel>
+    <div className="mb-5 w-100 ">
+      <div className="mb-5 w-100">
+        <Carousel className="w-100">
           <Carousel.Item>
             <img
               className="d-block w-100"
@@ -27,7 +27,7 @@ const Home = () => {
 
             <Carousel.Caption>
               <h3>Serving the best!</h3>
-              <p>We serve you the best flevour in the country!</p>
+              <p>We serve you the best flavour in the country!</p>
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item>
@@ -38,8 +38,8 @@ const Home = () => {
             />
 
             <Carousel.Caption>
-              <h3>Fresh and natural</h3>
-              <p>We use only natural ingredients!</p>
+              <h3>In a moment</h3>
+              <p>Get your desired drink in a moment</p>
             </Carousel.Caption>
           </Carousel.Item>
         </Carousel>

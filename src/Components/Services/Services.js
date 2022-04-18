@@ -14,12 +14,14 @@ const Services = () => {
         <div>
             <h3 className='text-center text-primary mb-4'>Our Services {services.length}</h3>
             <div className='container'>
-            {
+                <div className='row'>
+                {
                 services.map(service => <Service
                 key={service.id}
                 service={service}
                 ></Service>)
             }
+                </div>
             </div>
         </div>
     );
