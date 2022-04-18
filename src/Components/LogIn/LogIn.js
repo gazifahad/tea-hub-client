@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
 import { Button, Form } from "react-bootstrap";
 import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
 import { Link, useNavigate, useLocation } from "react-router-dom";
@@ -6,6 +7,17 @@ import auth from "../../firebase.init";
 import Loading from "../Loading/Loading";
 
 const LogIn = () => {
+  const auth = getAuth();
+  const provider = new GoogleAuthProvider();
+  const handleGoogleSignin=()=>{
+    signInWithPopup(auth, provider)
+    .then(result=>{
+      console.log(result.user);
+    })
+    .catch(error=>{
+      console.log(error);
+    })
+  }
   const [signInWithEmailAndPassword, user, loading, error] =
     useSignInWithEmailAndPassword(auth);
 
@@ -56,8 +68,10 @@ const LogIn = () => {
         </Form.Group>
         <Button variant="primary" type="submit">
           Log in
-        </Button>       
+        </Button>   
+           
       </Form>
+      <button onClick={handleGoogleSignin}>Sign in with google</button> 
       <p className="mt-3">
         Forgot password? <button className="btn btn-link text-white">Reset password</button>
       </p>
