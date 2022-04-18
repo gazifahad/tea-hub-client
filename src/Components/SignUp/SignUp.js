@@ -1,54 +1,47 @@
-import { async } from "@firebase/util";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Button, Form } from "react-bootstrap";
-import { useCreateUserWithEmailAndPassword, useSendEmailVerification } from "react-firebase-hooks/auth";
+import { useAuthState, useCreateUserWithEmailAndPassword, useSignInWithGoogle } from "react-firebase-hooks/auth";
 import { Link, useLocation, useNavigate } from "react-router-dom";
+import { toast, ToastContainer } from "react-toastify";
 import auth from "../../firebase.init";
 import Loading from "../Loading/Loading";
+import Welcome from "../Welcome/Welcome";
+import googleicon from '../../images/google.png';
+
 
 const SignUp = () => {
-  const [
-    createUserWithEmailAndPassword,
-    user,
-    loading,
-    errorSignUp,
-  ] = useCreateUserWithEmailAndPassword(auth, {sendEmailVerification: true});
+  const [existUuser] = useAuthState(auth);
+  const [signInWithGoogle, googleUser, googleLoading, googleError] = useSignInWithGoogle(auth);
 
+
+  const [createUserWithEmailAndPassword, user, loading, error] =
+    useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
 
   
-
-  const navigate = useNavigate();
-  const location = useLocation();
-  const from = location.state?.from?.pathname || "/";
-
-  useEffect(() => {
-    if (user) {
-      navigate(from, { replace: true });
-    }
-  }, [user]); 
-
- 
-
   const handleFormSubmission = (e) => {
     e.preventDefault();
     const name = e.target.name.value;
     const email = e.target.email.value;
     const password = e.target.password.value;
     createUserWithEmailAndPassword(email, password);
-    console.log('verification sent');
-    console.log(user);
+    toast( "We sent email to you!");
   };
-
-
-
+         
 
   if (loading) {
-    return <Loading></Loading>
+    return <Loading></Loading>;
   }
 
   return (
-    <div className="w-25 mx-auto my-5">
-      <h3 className="text-center text-primary">Please Sign Up</h3>
+    <div >
+      {existUuser 
+      ? <div>
+        <Welcome></Welcome>
+        <ToastContainer />
+      </div>
+
+      : <div className="w-25 mx-auto my-5">
+        <h3 className="text-center text-primary">Please Sign Up</h3>
       <Form onSubmit={handleFormSubmission}>
         <Form.Group className="mb-3" controlId="name">
           <Form.Label>Full Name</Form.Label>
@@ -60,7 +53,12 @@ const SignUp = () => {
         </Form.Group>
         <Form.Group className="mb-3" controlId="email">
           <Form.Label>Email address</Form.Label>
-          <Form.Control name="email" type="email" placeholder="Enter email" required/>
+          <Form.Control
+            name="email"
+            type="email"
+            placeholder="Enter email"
+            required
+          />
           <Form.Text className="text-muted">
             We'll never share your email with anyone else.
           </Form.Text>
@@ -74,15 +72,22 @@ const SignUp = () => {
             placeholder="Password"
             required
           />
-        </Form.Group>        
+        </Form.Group>
         <Button variant="primary" type="submit">
           Sign up
         </Button>
       </Form>
+      <div className="d-flex text-center my-3 google-btn p-2 rounded pe-auto" onClick={() => signInWithGoogle()} >
+         <img className="googleicon" src={googleicon} alt="" /> <span className="ms-2">Sign in with google</span>
+        </div>
+
 
       <p className="mt-3">
         Already have an account? <Link to="/login">Log in</Link>
       </p>
+      </div>
+      
+      }
     </div>
   );
 };
