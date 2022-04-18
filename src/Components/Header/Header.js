@@ -17,7 +17,7 @@ const Header = () => {
       <Navbar bg="primary" expand="lg" variant="dark">
         <Container className="container">
           <Navbar.Brand as={Link} to="/">
-            RAJU TEA STALL
+              TEA HUB
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">

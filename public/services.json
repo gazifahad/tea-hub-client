@@ -1,9 +1,44 @@
 [
-    {"id": 1, "name" : "Osthir Tea", "price" : 50 , "img" : "https://images.pexels.com/photos/2013749/pexels-photo-2013749.jpeg?auto=compress&cs=tinysrgb&h=250&w=360 ", "description" : "Very Teasty" },
-    {"id": 2, "name" : "Osthir Coffe", "price" : 50 , "img" : "https://images.pexels.com/photos/1034044/pexels-photo-1034044.jpeg?auto=compress&cs=tinysrgb&h=250&w=360 ", "description" : "Very Teasty" },
-    {"id": 3, "name" : "Osthir Milkshake", "price" : 50 , "img" : "https://images.pexels.com/photos/908331/pexels-photo-908331.jpeg?auto=compress&cs=tinysrgb&h=250&w=360 ", "description" : "Very Teasty" },
-    {"id": 4, "name" : "Osthir Lacchi", "price" : 50 , "img" : "https://images.pexels.com/photos/162947/coffee-glass-beverage-coffee-mug-162947.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=250&w=360 ", "description" : "Very Teasty" },
-    {"id": 5, "name" : "Osthir Juice", "price" : 50 , "img" : "https://images.pexels.com/photos/1493079/pexels-photo-1493079.jpeg?auto=compress&cs=tinysrgb&h=250&w=360", "description" : "Very Teasty" },
-    {"id": 6, "name" : "Osthir Cold Drink", "price" : 50 , "img" : "https://images.pexels.com/photos/4111831/pexels-photo-4111831.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=250&w=360 ", "description" : "Very Teasty" }
-    
+    {
+        "id": 1,
+        "name": "Shahi Tea",
+        "price": 40,
+        "img": "https://images.pexels.com/photos/2013749/pexels-photo-2013749.jpeg?auto=compress&cs=tinysrgb&h=250&w=360 ",
+        "description": "osthir taste"
+    },
+    {
+        "id": 2,
+        "name": "black Coffe",
+        "price": 80,
+        "img": "https://images.pexels.com/photos/1034044/pexels-photo-1034044.jpeg?auto=compress&cs=tinysrgb&h=250&w=360 ",
+        "description": "taste blast"
+    },
+    {
+        "id": 3,
+        "name": "Grand Milkshake",
+        "price": 250,
+        "img": "https://images.pexels.com/photos/908331/pexels-photo-908331.jpeg?auto=compress&cs=tinysrgb&h=250&w=360 ",
+        "description": "very healthy"
+    },
+    {
+        "id": 4,
+        "name": "Lacchi special",
+        "price": 150,
+        "img": "https://images.pexels.com/photos/162947/coffee-glass-beverage-coffee-mug-162947.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=250&w=360 ",
+        "description": "best in cheap"
+    },
+    {
+        "id": 5,
+        "name": "Juice e mango",
+        "price": 100,
+        "img": "https://images.pexels.com/photos/1493079/pexels-photo-1493079.jpeg?auto=compress&cs=tinysrgb&h=250&w=360",
+        "description": "Mind soothing"
+    },
+    {
+        "id": 6,
+        "name": "Drink cool",
+        "price": 30,
+        "img": "https://images.pexels.com/photos/4111831/pexels-photo-4111831.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=250&w=360 ",
+        "description": "affordable price"
+    }
 ]
