@@ -4,7 +4,8 @@ import { Link } from "react-router-dom";
 
 const Service = ({ service }) => {
   return (
-    <div className="col-4">
+    <div className="row">
+      <div className="col-1 col-sm-1 col-md-4">
       <Card style={{ width: "18rem" }}>
         <Card.Img variant="top" src={service.img} />
         <Card.Body>
@@ -17,6 +18,7 @@ const Service = ({ service }) => {
           </div>
         </Card.Body>
       </Card>
+    </div>
     </div>
   );
 };

@@ -7,7 +7,7 @@ const Footer = () => {
     const year = date.getFullYear();
     return (
         <div className='text-center footer'>
-            <small>&copy; {year} Raju Tea Stall</small>
+            <small>&copy; {year} Tea hub</small>
         </div>
     );
 };
